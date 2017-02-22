@@ -1,10 +1,3 @@
-// a change to test github function
-
-// and another code change to test again
-// plus 1 more
-
-
-// plus a change made on local Laptop PC.
 
 ******************
 JScript
@@ -1040,3 +1033,160 @@ function Circle (radius) {
         return 2 * Math.PI * this.radius;
     };
 };
+
+var bob = {
+    firstName: "Bob",
+    lastName: "Jones",
+    phoneNumber: "(650) 777-777",
+    email: "bob.jones@example.com"
+};
+
+console.log(bob.firstName);
+console.log(bob.lastName);
+console.log(bob.email);
+
+// 2 objects, into an array, and print to console.
+var bob = {
+    firstName: "Bob",
+    lastName: "Jones",
+    phoneNumber: "(650) 777-7777",
+    email: "bob.jones@example.com"
+};
+var mary = {
+    firstName: "Mary",
+    lastName: "Johnson",
+    phoneNumber: "(650) 888-8888",
+    email: "mary.johnson@example.com"
+};
+
+var contacts = [bob, mary];
+console.log(mary.phoneNumber)
+
+// 2 objects create function to print out
+var bob = {
+    firstName: "Bob",
+    lastName: "Jones",
+    phoneNumber: "(650) 777-7777",
+    email: "bob.jones@example.com"
+};
+
+var mary = {
+    firstName: "Mary",
+    lastName: "Johnson",
+    phoneNumber: "(650) 888-8888",
+    email: "mary.johnson@example.com"
+};
+
+var contacts = [bob, mary];
+
+// printPerson function added here
+
+var printPerson = function (person) {
+    console.log(person.firstName + " " + person.lastName);
+}
+printPerson(contacts[0]);
+printPerson(contacts[1]);
+
+// Listing thru using for loop.
+
+
+var bob = {
+    firstName: "Bob",
+    lastName: "Jones",
+    phoneNumber: "(650) 777-7777",
+    email: "bob.jones@example.com"
+};
+
+var mary = {
+    firstName: "Mary",
+    lastName: "Johnson",
+    phoneNumber: "(650) 888-8888",
+    email: "mary.johnson@example.com"
+};
+
+var contacts = [bob, mary];
+
+function printPerson(person) {
+    console.log(person.firstName + " " + person.lastName);
+}
+
+function list() {
+    var contactsLength = contacts.length;
+    for (var counter = 0; counter < contactsLength; counter++) {
+      printPerson(contacts[counter]);
+    };
+};
+list;
+
+
+var bob = {
+    firstName: "Bob",
+    lastName: "Jones",
+    phoneNumber: "(650) 777-7777",
+    email: "bob.jones@example.com"
+};
+
+var mary = {
+    firstName: "Mary",
+    lastName: "Johnson",
+    phoneNumber: "(650) 888-8888",
+    email: "mary.johnson@example.com"
+};
+
+var contacts = [bob, mary];
+
+function printPerson(person) {
+    console.log(person.firstName + " " + person.lastName);
+}
+
+function list() {
+	var contactsLength = contacts.length;
+	for (var i = 0; i < contactsLength; i++) {
+		printPerson(contacts[i]);
+	}
+}
+
+/*Create a search function
+then call it passing "Jones"*/
+
+function search(lastName) {
+   var contactsLength = contacts.length;
+   for (var i = 0; i < contactsLength; i++) {
+	    if (lastName === contacts[i].lastName)
+	    {
+		printPerson(contacts[i]);
+        }
+   }    
+}
+
+search("Jones")
+
+
+/*Create an add function
+passing approp parms*/
+function add(firstName, lastName, email, phoneNumber) {
+    contacts[contacts.length] = {
+        firstName: firstName,
+        lastName: lastName,
+        phoneNumber: phoneNumber,
+        email: email
+    };   
+};
+
+
+
+add("JOhn", "Smith", "john.smith@example.com", "(123) 111-2222");
+
+list();
+
+/* An Objective Review
+Let's review the basics of objects covered in our previous lesson on objects. 
+Recall we can create objects using either literal notation or constructor notation.
+
+Literal notation creates a single object. Literal notation uses curly brackets { } and 
+the object's default properties are defined within the brackets using property:value notation.
+Constructor notation involves defining an object constructor. 
+And like defining a function, we use the function keyword. You can think of this constructor 
+as a "template" from which you can create multiple objects. To create a new object from a constructor, we use the new keyword.
+*/
+
